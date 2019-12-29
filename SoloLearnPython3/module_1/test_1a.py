@@ -15,3 +15,4 @@ print(10 % 3)
 # strings:
 x = 'a2'
 print(x*4)
+a = input(": ")
