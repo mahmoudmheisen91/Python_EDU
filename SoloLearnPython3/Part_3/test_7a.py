@@ -9,6 +9,7 @@ class Cat:
 
 myCat = Cat('Jack', 'Black')
 myCat.show()
+print("here i added print")
 
 class Dog:
     legs = 4
@@ -174,7 +175,7 @@ print(len(vague_list))
 print(vague_list[2])
 print(vague_list[2])
 
-
+a = input(": ")
 
 
 
