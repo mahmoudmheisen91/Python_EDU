@@ -16,4 +16,14 @@ else:
 
 print(5*"-")
 
-
+# while loop:
+i = -1
+while i < 10:
+	i += 1
+	if i == 5 or i == 6:
+		continue
+	if i == 8:
+		break
+	print(f"i = {i}")
+	
+print(10*"-")
