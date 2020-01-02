@@ -50,7 +50,7 @@ print(s1)
 print(s2)
 print(s1 + s2)
 print(s1 * 5)
-print("-----")
+print(5*"-")
 
 print("this's is test 1")
 print('this"s is test 1')
@@ -75,9 +75,9 @@ b = 10
 print(f"this is b = {b}")
 print(1 + 3 + 2 * 4 / 2)
 
-print(int(1/2))
+print(int(1.3/2))
 
-
+print(help(print))
 
 
 
