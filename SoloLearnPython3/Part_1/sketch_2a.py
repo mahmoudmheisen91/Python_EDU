@@ -78,3 +78,5 @@ print(10*"-")
 # for loops:
 for i in li1:
 	print(str(i) + "!")
+
+print(dir(list))

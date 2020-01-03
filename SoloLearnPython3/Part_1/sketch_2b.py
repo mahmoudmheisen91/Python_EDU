@@ -10,6 +10,8 @@ while True:
 
 	if user_input == "q":
 		break
+	elif user_input not in ["add", "sub", "mul", "div"]:
+		print("Unknown operation")
 	else:
 		num1 = float(input("enter num 1: "))
 		num2 = float(input("enter num 2: "))
@@ -21,6 +23,4 @@ while True:
 			print(f"result: {num1 * num2}")
 		elif user_input == "div":
 			print(f"result: {num1 / num2}")
-		else:
-			print("Unknown operation")
 
