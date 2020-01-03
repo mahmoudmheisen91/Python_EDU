@@ -21,3 +21,13 @@ def do2(func,a):
 num = 4
 num2 = do2(add_one, num)
 print(num2)
+
+# Modules:
+import random
+print(random.randint(1, 5)) # 5 is included
+
+from math import pi as pipi
+print(pipi)
+
+import unittest
+print(dir(unittest))
