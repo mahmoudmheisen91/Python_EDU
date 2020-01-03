@@ -77,4 +77,4 @@ print(10*"-")
 
 # for loops:
 for i in li1:
-	print(i + "!")
+	print(str(i) + "!")
