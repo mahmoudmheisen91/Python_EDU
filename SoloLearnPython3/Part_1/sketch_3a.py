@@ -4,14 +4,14 @@ def my_func(x, y):
 	
 print(my_func(2,3))
 
-# functions as arguments:
+# functions as objects (variables):
 def add(a, b):
 	return a + b
 	
 func = add
 print(func(1, 2))
 
-# Functions as objects:
+# Functions as objects (argument) (higher order functions):
 def add_one(x):
 	return x + 1
 	
