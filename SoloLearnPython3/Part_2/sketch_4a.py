@@ -27,3 +27,28 @@ finally:
 	num = 3 # Assertion Message
 	#assert (num < 0), "num is +ve"
 	
+def add(num1, num2):
+	assert type(num1) == int, "num1 must be int"
+	assert type(num2) == int, "num1 must be int"
+	assert num1 >= 0, "num1 must be +ve"
+	assert num2 >= 0, "num2 must be +ve"
+	return num1 + num2
+
+#print(add(4.2, -5))
+assert add(2, 3) == 5
+
+# Raise:
+"""
+num = -3
+if float(num) < 0:
+    raise ValueError("Negative!")
+"""
+
+"""
+try:
+   num = 5 / 0
+except:
+   print("An error occurred")
+   raise
+"""
+
