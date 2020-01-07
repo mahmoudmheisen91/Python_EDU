@@ -10,7 +10,7 @@ print(primary["red"])
 """
 Only immutable objects can be used as keys to 
 dictionaries. Immutable objects are those that 
-can't be changed. So far, the only mutable 
+can't be changed "string, tuple". So far, the only mutable 
 objects you've come across are lists and 
 dictionaries.
 """
@@ -40,7 +40,8 @@ print(pairs.get(7))
 print(pairs.get(12345, "not in dictionary"))
 print("---------------")
 
-# Tuples are very similar to lists, except that they are immutable (they cannot be changed)
+# Tuples are very similar to lists, except that 
+# they are immutable (they cannot be changed)
 words = ("spam", "eggs", "sausages",)
 print(words[0])
 
@@ -69,7 +70,7 @@ print("---------------")
 
 # string formatting
 nums = [4, 5, 6]
-msg = "Numbers: {0} {1} {2}". format(nums[0], nums[1], nums[2])
+msg = "Numbers: {0} {1} {2}".format(nums[0], nums[1], nums[2])
 print(msg)
 
 a = "{x}, {y}".format(x=5, y=12)
@@ -126,10 +127,6 @@ for char in "abcdefghijklmnopqrstuvwxyz":
   perc = 100 * count_char(text, char) / len(text)
   print("{0} - {1}%".format(char, round(perc, 2)))
 
-
-# we can slice tuple:
-nums = (55, 44, 33, 22)
-print(max(min(nums[:2]), abs(-42)))
 
 
 
