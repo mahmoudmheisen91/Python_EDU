@@ -1,40 +1,40 @@
 # Logics:
-x = True # must be capital
+x = True  # must be capital
 
 if x and 3 == 3:
-	print(str(not x))
+    print(str(not x))
 else:
-	print(str(False))
+    print(str(False))
 
 num = 4
 if num > 10:
-	print("biiger")
+    print("biiger")
 elif num > 2 or num != 5:
-	print(f"{num} bigger than 2")
+    print(f"{num} bigger than 2")
 else:
-	print("nop")
+    print("nop")
 
 print(5*"-")
 
 # while loop:
 i = -1
 while i < 10:
-	i += 1
-	if i == 5 or i == 6:
-		continue
-	if i == 8:
-		break
-	print(f"i = {i}")
-	
+    i += 1
+    if i == 5 or i == 6:
+        continue
+    if i == 8:
+        break
+    print(f"i = {i}")
+
 print(10*"-")
 
 # while and else no break:
 i = 0
 while i < 3:
-	print(f"i = {i}")
-	i += 1
-else:	
-	print(10*"-")
+    print(f"i = {i}")
+    i += 1
+else:
+    print(10*"-")
 
 # Lists:
 li1 = []
@@ -77,6 +77,16 @@ print(10*"-")
 
 # for loops:
 for i in li1:
-	print(str(i) + "!")
+    print(str(i) + "!")
 
 print(dir(list))
+
+print(8*"-")
+a = [1, 1, 2, 3]
+print(max(a))
+print(min(a))
+print(a.reverse())
+print(a)
+print(a.count(1))
+print(a.remove(1))
+print(a)
