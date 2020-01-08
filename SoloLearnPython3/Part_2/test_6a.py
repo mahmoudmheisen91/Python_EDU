@@ -8,7 +8,7 @@ print((lambda x: x + x)(4))
 double = lambda x: x * 2
 print(double(7))
 
-# map return iterable:
+# map, filter return iterable:
 li = [11, 22, 33, 44, 55]
 
 # cast to list:
