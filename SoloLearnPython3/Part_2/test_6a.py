@@ -107,14 +107,20 @@ print(3 in num_set)
 print("spam" not in word_set)
 
 """
-Sets differ from lists in several ways, but share several list operations such as len.
-They are unordered, which means that they can't be indexed.
+Sets differ from lists in several ways, but share 
+several list operations such as len.
+They are unordered, which means that they can't
+be indexed.
 They cannot contain duplicate elements.
-Due to the way they're stored, it's faster to check whether an item is part of a set, rather than part of a list.
+Due to the way they're stored, it's faster to
+check whether an item is part of a set, 
+rather than part of a list.
 Instead of using append to add to a set, use add.
-The method remove removes a specific element from a set; pop removes an arbitrary element.
+The method remove removes a specific element 
+from a set; pop removes an arbitrary element.
 
-Basic uses of sets include membership testing and the elimination of duplicate entries.
+Basic uses of sets include membership testing 
+and the elimination of duplicate entries.
 """
 
 nums = {1, 2, 1, 3, 1, 4, 5, 6}
@@ -142,7 +148,9 @@ print(second - first)
 print(first ^ second)
 
 """
-As we have seen in the previous lessons, Python supports the following data structures: lists, dictionaries, tuples, sets.
+As we have seen in the previous lessons, 
+Python supports the following data structures: 
+lists, dictionaries, tuples, sets.
 
 When to use a dictionary:
 - When you need a logical association between a key:value pair.
@@ -174,9 +182,12 @@ for i in count(3):
 """
 There are many functions in itertools that operate on iterables, in a similar way to map and filter.
 Some examples:
-takewhile - takes items from an iterable while a predicate function remains true;
-chain - combines several iterables into one long one;
-accumulate - returns a running total of values in an iterable.
+takewhile - takes items from an iterable while a 
+predicate function remains true;
+chain - combines several iterables into one long 
+one;
+accumulate - returns a running total of values 
+in an iterable.
 """
 
 from itertools import accumulate, takewhile
@@ -186,8 +197,10 @@ print(nums)
 print(list(takewhile(lambda x: x<= 6, nums)))
 
 """
-There are also several combinatoric functions in itertool, such as product and permutation.
-These are used when you want to accomplish a task with all possible combinations of some items.
+There are also several combinatoric functions in 
+itertool, such as product and permutation.
+These are used when you want to accomplish a
+task with all possible combinations of some items.
 """
 from itertools import product, permutations
 

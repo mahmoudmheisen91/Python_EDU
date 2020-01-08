@@ -1,5 +1,25 @@
+# Itertools:
+from itertools import chain, count, accumulate
+from itertools import takewhile, product, permutations
+
+for i in count(5):
+    print(i)
+    if i == 6:
+        break
+
+nums = list(accumulate(range(8)))
+print(nums)
+num2 = list(takewhile(lambda x: x <= 6, nums))
+print(num2)
+num3 = list(filter(lambda x: x <= 6, set(nums)))
+print(num3)
+print(list(chain(num2, num3)))
+
+letters = ("A", "B")
+print(list(product(letters, range(2))))
+print(list(permutations(letters, 2)))
+
 # Recursion:
-from itertools import count, accumulate, takewhile
 
 
 def factorial(x):
@@ -67,5 +87,3 @@ print(first & second)
 print(first - second)
 print(second - first)
 print(first ^ second)
-
-# Itertools:
