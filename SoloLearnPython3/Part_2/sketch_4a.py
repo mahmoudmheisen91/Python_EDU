@@ -37,7 +37,13 @@ def add(num1, num2):
 
 
 #print(add(4.2, -5))
+print(8*"-")
+try:
+    assert add(2, 3) == 4
+except AssertionError:
+    print("error")
 assert add(2, 3) == 5
+print(8*"-")
 
 # Raise:
 """
