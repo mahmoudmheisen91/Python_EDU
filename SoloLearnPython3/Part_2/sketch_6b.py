@@ -53,7 +53,6 @@ def is_even(x):
 def is_odd(x):
     return not is_even(x)
 
-
 print(is_odd(17))
 print(is_even(23))
 print(8*"-")
