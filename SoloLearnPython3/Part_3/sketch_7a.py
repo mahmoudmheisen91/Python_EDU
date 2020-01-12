@@ -52,6 +52,11 @@ print(8*"-")
 
 # Magic Methods Dunders:
 '''
+__radd__
+__new__
+__del__
+__repr__
+
 __sub__ for -
 __mul__ for *
 __truediv__ for /
