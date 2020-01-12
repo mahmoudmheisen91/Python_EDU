@@ -99,15 +99,19 @@ if re.search(pattern, "1ab"):
    print("Match 3")
 
 '''
-Place a ^ at the start of a character class to invert it.
-This causes it to match any character other than the ones included.
-Other metacharacters such as $ and ., have no meaning within character classes.
+Place a ^ at the start of a character class to 
+invert it.
+This causes it to match any character other 
+than the ones included.
+Other metacharacters such as $ and ., 
+have no meaning within character classes.
 The metacharacter ^ has no meaning unless it is the first character in a class.
 '''
 pattern = r"[^A-Z]"
 '''
 The pattern [^A-Z] excludes uppercase strings.
-Note, that the ^ should be inside the brackets to invert the character class.
+Note, that the ^ should be inside the brackets to 
+invert the character class.
 '''
 
 if re.search(pattern, "this is all quiet"):
@@ -134,7 +138,8 @@ if re.match(pattern, "spam"):
    print("Match 3")
 
 '''
-The example above matches strings that start with "egg" and follow with zero or more "spam"s.
+The example above matches strings that start with 
+"egg" and follow with zero or more "spam"s.
 '''
 
 # () means a group
@@ -162,7 +167,8 @@ if re.match(pattern, "9999"):
 
 
 # '([^aeiou][aeiou][^aeiou])+'
-# the above mean One or more repetitions of a non-vowel, a vowel and a non-vowel
+# the above mean One or more repetitions of a 
+# non-vowel, a vowel and a non-vowel
 
 
 pattern = r"a(bc)(de)(f(g)h)i"
@@ -177,9 +183,17 @@ if match:
 
 
 """
-Two useful ones are named groups and non-capturing groups.
-Named groups have the format (?P<name>...), where name is the name of the group, and ... is the content. They behave exactly the same as normal groups, except they can be accessed by group(name) in addition to its number.
-Non-capturing groups have the format (?:...). They are not accessible by the group method, so they can be added to an existing regular expression without breaking the numbering.
+Two useful ones are named groups and non-capturing 
+groups.
+Named groups have the format (?P<name>...), 
+where name is the name of the group, and ... 
+is the content. They behave exactly the same as 
+normal groups, except they can be accessed by 
+group(name) in addition to its number.
+Non-capturing groups have the format (?:...). 
+They are not accessible by the group method, 
+so they can be added to an existing regular 
+expression without breaking the numbering.
 """
 pattern = r"(?P<first>abc)(?:def)(ghi)"
 
@@ -191,8 +205,14 @@ if match:
 
 # Special Sequences
 '''
-One useful special sequence is a backslash and a number between 1 and 99, e.g., \1 or \17. This matches the expression of the group of that number.
-Note, that "(.+) \1" is not the same as "(.+) (.+)", because \1 refers to the first group's subexpression, which is the matched expression itself, and not the regex pattern.
+One useful special sequence is a backslash and a
+ number between 1 and 99, e.g., \1 or \17. 
+ This matches the expression of the group of that 
+ number.
+Note, that "(.+) \1" is not the same as 
+"(.+) (.+)", because \1 refers to the first group's 
+subexpression, which is the matched expression itself, 
+and not the regex pattern.
 '''
 # any thing followed by the same thing
 pattern = r"(.+) \1"
@@ -211,10 +231,16 @@ if match:
 
 '''
 More useful special sequences are \d, \s, and \w.
-These match digits, whitespace, and word characters respectively.
-In ASCII mode they are equivalent to [0-9], [ \t\n\r\f\v], and [a-zA-Z0-9_].
-In Unicode mode they match certain other characters, as well. For instance, \w matches letters with accents.
-Versions of these special sequences with upper case letters - \D, \S, and \W - mean the opposite to the lower-case versions. For instance, \D matches anything that isn't a digit.
+These match digits, whitespace, and word 
+characters respectively.
+In ASCII mode they are equivalent to [0-9], 
+[ \t\n\r\f\v], and [a-zA-Z0-9_].
+In Unicode mode they match certain other characters, 
+as well. For instance, \w matches letters with accents.
+Versions of these special sequences with upper 
+case letters - \D, \S, and \W - mean the 
+opposite to the lower-case versions. 
+For instance, \D matches anything that isn't a digit.
 '''
 pattern = r"(\D+\d)"
 
@@ -237,11 +263,16 @@ if match:
 
 '''
 Additional special sequences are \A, \Z, and \b.
-The sequences \A and \Z match the beginning and end of a string, respectively.
-The sequence \b matches the empty string between \w and \W characters, or \w characters and the beginning or end of the string. Informally, it represents the boundary between words.
+The sequences \A and \Z match the beginning and end 
+of a string, respectively.
+The sequence \b matches the empty string between 
+\w and \W characters, or \w characters and the 
+beginning or end of the string. 
+Informally, it represents the boundary between words.
 The sequence \B matches the empty string anywhere else.
 '''
-# \b(cat)\b" basically matches the word "cat" surrounded by word boundaries
+# \b(cat)\b" basically matches the word "cat" 
+# surrounded by word boundaries
 pattern = r"\b(cat)\b"
 
 match = re.search(pattern, "The cat sat!")
@@ -261,7 +292,7 @@ if match:
 
 
 # Email Extraction
-# dot dollowed by \ to treat it like character
+# dot followed by \ to treat it like character
 pattern = r"([\w\.-]+)@([\w\.-]+)(\.[\w\.]+)"
 
 '''
@@ -278,7 +309,9 @@ if match:
    print(match.group())
 
 '''
-In case the string contains multiple email addresses, we could use the re.findall method instead of re.search, to extract all email addresses.
+In case the string contains multiple email addresses, 
+we could use the re.findall method instead of 
+re.search, to extract all email addresses.
 '''
 
 # "(4{5,6})\1" means 10 or 12 fours
